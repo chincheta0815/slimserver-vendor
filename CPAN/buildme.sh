@@ -1106,7 +1106,7 @@ function build_libjpeg {
         mv -fv libjpeg.a $BUILD/lib/libjpeg.a
         rm -fv libjpeg-x86_64.a libjpeg-i386.a libjpeg-ppc.a
 
-    elif [[ "$ARCH" =~ ^(i386-linux|x86_64-linux|i86pc-solaris).*$ || "$OS" == "FreeBSD" ]]; then
+    elif [[ "$ARCH" =~ ^(i386-linux|x86_64-linux).*$ || "$OS" == "FreeBSD" ]]; then
         # build libjpeg-turbo
         tar_wrapper zxf $TURBO_VER.tar.gz
         cd $TURBO_VER
